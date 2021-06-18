@@ -4,7 +4,7 @@ const cors = require('cors');
 const puppeteer = require('puppeteer');
 
 app.use(cors());
-app.get('/freelas', (req, res) => {
+app.post('/freelas', (req, res) => {
   (async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
