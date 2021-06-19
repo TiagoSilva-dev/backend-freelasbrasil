@@ -4,7 +4,11 @@ const cors = require('cors');
 const puppeteer = require('puppeteer');
 
 app.use(cors());
-app.post('/freelas', (req, res) => {
+app.get('/freelas', (req, res) => {
+  let teste = {
+    nome: 'tiago'
+  }
+  /*
   (async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
@@ -29,7 +33,8 @@ app.post('/freelas', (req, res) => {
     })
        res.json(vagaList);
     await browser.close();
-  })();
+  })();*/
+  res.json(teste);
 });
 
 app.listen(process.env.PORT || 3002, () => {
