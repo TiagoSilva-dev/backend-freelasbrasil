@@ -25,7 +25,7 @@ request('https://www.br.freelancer.com/jobs/javascript_react-js_angular-js_vue-j
 })
 
 app.get('/freelas', (req, res) => {
-  res.json(freelas);
+  res.json('freelas');
 });
 
 app.listen(3002, () => {
