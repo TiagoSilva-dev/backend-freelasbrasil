@@ -9,6 +9,8 @@ app.use(cors());
 let freelas = [];
 let site = 'https://www.br.freelancer.com';
 request('https://www.br.freelancer.com/jobs/javascript_react-js_angular-js_vue-js_php_java/?languages=pt', function (err, res, body) {
+  if (err) console.log('Erro: ' + err);
+
   var $ = cheerio.load(body);
 
   $('.JobSearchCard-item').each(function () {
